@@ -61,15 +61,15 @@ temp/
 .next/
 
 # Ignore generated files by React
-public/static/
-public/favicon.ico
-public/logo192.png
-public/logo512.png
-public/manifest.json
-public/robots.txt
+# public/static/
+# public/favicon.ico
+# public/logo192.png
+# public/logo512.png
+# public/manifest.json
+# public/robots.txt
 
 # Ignore the entire public folder except for the HTML file
-public/*
+# public/*
 !public/index.html
 
 # Ignore React's build directory
