@@ -1,0 +1,98 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+logs/*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Build directories
+build/
+dist/
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug files
+debug/
+debug.log.*
+
+# Temporary files
+tmp/
+temp/
+
+# Specific files
+.eslintcache
+.next/
+
+# Ignore generated files by React
+public/static/
+public/favicon.ico
+public/logo192.png
+public/logo512.png
+public/manifest.json
+public/robots.txt
+
+# Ignore the entire public folder except for the HTML file
+public/*
+!public/index.html
+
+# Ignore React's build directory
+/build
+
+# Other files and directories
+.sass-cache/
+connect.lock
+coverage/
+lib-cov/
+*.seed
+*.log
+*.lock
+*.log.*
+*.swp
+.cache/
+*.tsbuildinfo
+
+# Optional: ignore test-related files and directories
+*.test.js
+*.spec.js
+__tests__/
+__mocks__/
+test/
+tests/
+__snapshots__/
