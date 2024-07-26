@@ -4,7 +4,8 @@ cors = require('cors')
 fs = require('fs')
 bodyparser = require('body-parser')
 upload = require("express-fileupload")
-execute = require('./Connection.js')
+// execute = require('./Connection.js')
+db=require("./db")
 app.use(cors())
 app.use(express.static("public/"))
 app.use(upload())
@@ -14,7 +15,7 @@ jwt = require('jsonwebtoken')
 bcrypt = require('bcryptjs')
 cookieParser = require("cookie-parser")
 app.use(cors({
-    origin: ["http://localhost:3000"],
+    origin: ["https://hotel-management-mocha.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true
 }));
@@ -28,7 +29,10 @@ const db = mysql.createConnection({
 
 
 app.get('/', async (req, res) => {
-    res.render('index.ejs', { about: await execute(`select * from about_us where status='active' limit 1`) })
+    const data=await db.query("Select * from users")
+    console.log(data)
+    res.send(" Stokes")
+    // res.render('index.ejs', { about: await execute(`select * from about_us where status='active' limit 1`) })
 })
 
 const verifyToken = (req, res, next) => {
