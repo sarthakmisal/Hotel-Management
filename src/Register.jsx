@@ -12,7 +12,7 @@ function Register() {
   const navigate = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post("http://localhost:5000/register", Values)
+    await axios.post("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/register", Values)
       .then(e => {
         console.log(e.data)
         if (e.data.Status == "Success") { navigate('/login') }

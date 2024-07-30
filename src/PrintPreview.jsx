@@ -10,7 +10,7 @@ function PrintPreview({ Auth }) {
 
   const fetchBill = async () => {
     try {
-      const item = await axios.get(`http://localhost:5000/getBillItem/${id}`);
+      const item = await axios.get(`http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/getBillItem/${id}`);
       console.log(item.data);
       setItem(item.data);
     } catch (err) {

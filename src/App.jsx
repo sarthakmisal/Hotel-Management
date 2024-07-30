@@ -19,7 +19,7 @@ function App() {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await axios.get('http://localhost:5000/verifyToken', {
+                    const response = await axios.get('http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/verifyToken', {
                         headers: { Authorization: token },
                     });
                     setAuth(response.data.authenticated);

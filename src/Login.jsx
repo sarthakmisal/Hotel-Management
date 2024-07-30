@@ -9,7 +9,7 @@ function Login({ setAuth }) {
         const token = localStorage.getItem('token');
         if (token) {
             try {
-                await axios.get("http://localhost:5000/verifyToken", {
+                await axios.get("http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/verifyToken", {
                     headers: { Authorization: token }
                 });
                 setAuth(true);
@@ -34,7 +34,7 @@ function Login({ setAuth }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/login', values);
+            const response = await axios.post('http://ec2-16-171-133-93.eu-north-1.compute.amazonaws.com:5000/login', values);
             if (response.data.token) {
                 localStorage.setItem('token', response.data.token);
                 setAuth(true);
